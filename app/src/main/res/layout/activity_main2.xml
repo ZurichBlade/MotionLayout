@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main2_scene"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="60dp"
+        android:layout_marginEnd="120dp"
+        android:elevation="2dp"
+        android:visibility="visible"
+        app:layoutDescription="@xml/activity_main2_scene2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/llMenuTop"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:alpha="2"
+            android:background="@drawable/img8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.motion.widget.MotionLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutDescription="@xml/activity_main2_scene3">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="30dp"
+                    android:elevation="2dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+                <ImageView
+                    android:id="@+id/ivIconMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:elevation="3dp"
+                    android:src="@drawable/ic_baseline_menu_open_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:elevation="3dp"
+                    android:ellipsize="end"
+                    android:text="Connell Eastwood"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imgAvatar"
+                    app:layout_constraintTop_toBottomOf="@+id/imgAvatar" />
+
+                <TextView
+                    android:id="@+id/tvUserEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="3dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingBottom="40dp"
+                    android:text="eastwoodconnell397@gmail.com"
+                    android:textColor="#A1A3AC"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvUserName"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
+
+
+            </androidx.constraintlayout.motion.widget.MotionLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/llMenu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#F2161A2E"
+            android:paddingBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llMenuTop">
+
+            <androidx.constraintlayout.motion.widget.MotionLayout
+                android:id="@+id/constraintLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutDescription="@xml/activity_main2_scene4"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="16dp">
+
+                <ImageView
+                    android:id="@+id/imageViewIconHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="25dp"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:focusable="true"
+                    android:src="@drawable/ic_baseline_home_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:focusable="true"
+                    android:text="Home"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewIconHome"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewIconHome"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewIconHome" />
+
+
+                <ImageView
+                    android:id="@+id/imageViewIconBooking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:focusable="true"
+                    android:src="@drawable/ic_baseline_bookmarks_24"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewIconHome"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewIconHome" />
+
+                <TextView
+                    android:id="@+id/textViewBooking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:focusable="true"
+                    android:text="Bookmarks"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewIconBooking"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewIconBooking"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewIconBooking" />
+
+
+                <ImageView
+                    android:id="@+id/ivIconContactus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:focusable="true"
+                    android:src="@drawable/ic_baseline_perm_contact_calendar_24"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewIconHome"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewIconBooking" />
+
+                <TextView
+                    android:id="@+id/tvContactus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:focusable="true"
+                    android:text="Contact us"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivIconContactus"
+                    app:layout_constraintStart_toEndOf="@+id/ivIconContactus"
+                    app:layout_constraintTop_toTopOf="@+id/ivIconContactus" />
+
+                <ImageView
+                    android:id="@+id/ivIconSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:focusable="true"
+                    android:src="@drawable/ic_baseline_settings_24"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewIconHome"
+                    app:layout_constraintTop_toBottomOf="@id/ivIconContactus" />
+
+                <TextView
+                    android:id="@+id/tvSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:focusable="true"
+                    android:text="Setting"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/ivIconSettings"
+                    app:layout_constraintTop_toTopOf="@+id/ivIconSettings" />
+
+                <TextView
+                    android:id="@+id/textViewLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginBottom="50dp"
+                    android:elevation="3dp"
+                    android:text="Log out"
+                    android:textColor="#A1A3AC"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/ivIconSettings"
+                    app:layout_constraintTop_toBottomOf="@id/ivIconSettings" />
+
+
+            </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_launcher_foreground"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
